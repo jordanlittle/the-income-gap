@@ -12,23 +12,180 @@ html {
         -ms-text-size-adjust: 100%;
 }
 
-html {
-    background-color: #fff;
-
-    @media (min-width: 90em) {
-        background: #ffffff; /* Old browsers */
-        background: linear-gradient(to bottom,  #ffffff 0%,#cccccc 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
-        background-attachment: fixed;
-        transition:.15s ease-in-out padding;
-    }
-}
-
 body {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color: $color-text;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
     font-family: $font-sans;
     background-color: #fff;
     overflow-x:hidden;
+}
+
+header,
+section{
+    padding: 20px;
+}
+
+.panel {
+    width:90%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate3d(-50%,-50%,0);
+}
+
+header {
+    height: 85vh;
+    position: relative;
+    text-align:center;
+
+    h1 {
+        font-size: 24px;
+        margin-bottom:20px;
+        font-weight: 700;
+    }
+
+    fieldset {
+        position:relative;
+        max-width: 320px;
+        margin:0 auto 20px;
+    }
+
+    .go {
+        position:absolute;
+        top:50%;
+        right:3px;
+        text-align: center;
+        font-weight: bold;
+        color: #222;
+        transform:translateY(-50%);
+        padding:5px 15px;
+        cursor:pointer;
+        background:#fff;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    .dollar-sign {
+        position:absolute;
+        top:50%;
+        left:8px;
+        transform:translateY(-50%);
+        font-size: 18px;
+        line-height: 1;
+        color: #777;
+    }
+
+    label {
+        font-size: 14px;
+        color: #666;
+    }
+
+    input {
+        border: 1px solid #222;
+        display:block;
+        font-size: 18px;
+        padding:10px 10px 10px 25px;
+        width:100%;
+    }
+
+    aside {
+        .coin-equals {
+            display:inline-block;
+            vertical-align: top;
+            font-size: 12px;
+            position: relative;
+            top:2px;
+        }
+
+        .disclaimer {
+            display:block;
+            font-style:italic;
+            color: #666;
+            font-size: 11px;
+            max-width: 480px;
+            margin:10px auto 0;
+        }
+    }
+}
+
+.coin {
+    display:inline-block;
+    width:82px;
+    height:12px;
+    background-image: linear-gradient(-270deg, #898223 0%, #DBD246 100%);
+    border: 1px solid #545007;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.39);
+    border-radius: 2px;
+}
+
+section {
+    max-width: 860px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+
+    & > div {
+        flex-basis:16.6667%;
+        position: relative;
+
+        &::before {
+            font-size: 12px;
+            display:block;
+            width:120px;
+            position: absolute;
+            top:-20px;
+            transform-origin:left bottom;
+            transform:rotate(-60deg) translateX(20px);
+        }
+    }
+
+    .you::before {content:"You"}
+    .labor-1::before {content:"Nat't Avg"}
+    .labor-2::before {content:"Highly Paid"}
+    .exec-1::before {content:"$1 Million"}
+    .exec-2::before {content:"$13.8 Million (avg CEO pay)"}
+    .exec-3::before {content:"$193 Million (top-paid)"}
+
+    .coin {
+        width:100%;
+        max-width: 82px;
+        display:block;
+        margin:0 auto -1px;
+    }
+}
+
+footer {
+    padding: calc(8vh + 20px) 20px;
+    background-color: #222;
+    color: #fff;
+
+    h2,
+    p {
+        width: 90%;
+        max-width: 860px;
+        margin:0 auto 20px;
+    }
+
+    h2 {
+        font-size: calc(5vw + 20px);
+        line-height: 1;
+        position:relative;
+        left:-5vw;
+        font-weight: 700;
+        margin-bottom:5vh;
+    }
+
+    p + h2 {
+        margin-top:100px;
+    }
+
+    p {
+        font-size: calc(1vw + 9px);
+        line-height: 1.5;
+    }
 }

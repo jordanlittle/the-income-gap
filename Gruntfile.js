@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 
 		watch: {
 	        styles: {
-                files: ['scss/*.scss', 'build/**/*.html'],
+                files: ['build/*.scss', 'build/**/*.html'],
                 tasks: ['sass', 'autoprefixer', 'bake'],
                 options: {
                     spawn: false
@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-bake');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.registerTask('default', ['watch']);
 };
