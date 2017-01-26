@@ -1,0 +1,17 @@
+{
+  "name": "the-income-gap",
+  "description": "The gap between the Haves and the Have-Nots.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jordan Little",
+    "url": "http://jordanlitle.com"
+  },
+  "repository": "https://github.com/jordanlittle/the-income-gap",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-bake": "^0.3.18",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.2.0"
+  }
+}

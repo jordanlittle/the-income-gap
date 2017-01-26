@@ -1,0 +1,109 @@
+%clearfix {
+    zoom:1;
+
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+%no-layout {
+    margin:0;
+    padding:0;
+}
+
+%hidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+%rounded {
+    border-radius: 6px;
+}
+
+%center-block {
+    // element must have explicit width
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+%vertical-rhythm {
+	margin-top:     1.625em;
+    margin-bottom:  1.625em;
+}
+
+%display-inline {
+    display:inline;
+}
+
+%display-block {
+    display:block;
+}
+
+%display-inline-block {
+    display:inline-block;
+}
+
+%unstyled {
+    @extend %no-layout;
+    list-style:none;
+    margin-left:0;
+}
+
+%overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%no-select {
+	user-select:none;
+}
+
+%no-tap-highlight {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+%wrap {
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+%debug-outline {
+    outline: 5px solid yellow;
+    position:relative;
+}
+
+%debug-tooltip {
+    position:absolute;
+    top:100%;
+    left:0;
+    background:rgba(0,0,0,.7);
+    padding:2px 5px;
+    color:#fff;
+    font-size:11px;
+    font-weight:bold;
+    width:100px;
+    text-align:center;
+}
+
+%grid-context {
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+}
+
+%grid-row-third {
+    @media (min-width:35em) {
+        flex-basis: 31.666667%;
+    }
+}

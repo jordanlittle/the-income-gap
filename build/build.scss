@@ -1,0 +1,34 @@
+@import "helpers";
+@import "reset";
+
+$font-sans:             'Roboto Mono', monospace;
+
+body,
+html {
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+    -webkit-text-size-adjust: 100%; // prevents OS font resizing on orientation change
+        -ms-text-size-adjust: 100%;
+}
+
+html {
+    background-color: #fff;
+
+    @media (min-width: 90em) {
+        background: #ffffff; /* Old browsers */
+        background: linear-gradient(to bottom,  #ffffff 0%,#cccccc 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+        background-attachment: fixed;
+        transition:.15s ease-in-out padding;
+    }
+}
+
+body {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $color-text;
+    font-family: $font-sans;
+    background-color: #fff;
+    overflow-x:hidden;
+}
